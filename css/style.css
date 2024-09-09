@@ -1,0 +1,64 @@
+html {
+    background-color: rgb(34, 34, 34);
+}
+body {
+    margin: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+
+    overflow: hidden;
+}
+footer {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 3rem;
+}
+header {
+    h1 {
+        margin: 0;
+    }
+}
+.heart {
+    position: relative;
+    width: 30rem;
+    height: 24rem;
+
+    clip-path: polygon(20% 0, 50% 25%, 80% 0, 100% 25%, 50% 100%, 0 25%);
+
+    display: grid;
+    place-items: center;
+}
+.heart::before {
+    position: absolute;
+    content: '';
+    width: 120%;
+    height: 150%;
+
+    background: conic-gradient(from 0deg, #eb50ff, #87ebd9, #eb50ff);
+    animation: rotate 4s linear infinite;
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.photo {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+
+    clip-path: polygon(20% 0, 50% 25%, 80% 0, 100% 25%, 50% 100%, 0 25%);
+
+    z-index: 1;
+}
